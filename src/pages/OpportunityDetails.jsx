@@ -36,7 +36,7 @@ function OpportunityDetails() {
       }
 
       const response = await fetch(
-        "http://https://hiforms-backend.onrender.com//api/applications",
+        "https://hiforms-backend.onrender.com//api/applications",
         {
           method: "POST",
           headers: {
@@ -71,7 +71,7 @@ function OpportunityDetails() {
     const fetchOpportunity = async () => {
       try {
         const response = await fetch(
-          `http://https://hiforms-backend.onrender.com//api/opportunities/${id}`,
+          `http://hiforms-backend.onrender.com//api/opportunities/${id}`,
         );
 
         const data = await response.json();

@@ -12,7 +12,7 @@ function UserDashboard() {
     const fetchOpportunities = async () => {
       try {
         const response = await fetch(
-          "http://https://hiforms-backend.onrender.com//api/opportunities",
+          "http://hiforms-backend.onrender.com//api/opportunities",
         );
 
         const data = await response.json();

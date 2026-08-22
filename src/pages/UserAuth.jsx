@@ -49,7 +49,7 @@ function UserAuth() {
 
       try {
         const response = await fetch(
-          "http://https://hiforms-backend.onrender.com//api/auth/signup",
+          "https://hiforms-backend.onrender.com//api/auth/signup",
           {
             method: "POST",
             headers: {
@@ -89,7 +89,7 @@ function UserAuth() {
     } else {
       try {
         const response = await fetch(
-          "http://https://hiforms-backend.onrender.com//api/auth/login",
+          "https://hiforms-backend.onrender.com//api/auth/login",
           {
             method: "POST",
 
