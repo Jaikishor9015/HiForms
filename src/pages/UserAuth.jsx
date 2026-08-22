@@ -48,17 +48,20 @@ function UserAuth() {
       }
 
       try {
-        const response = await fetch("http://localhost:5000/api/auth/signup", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
+        const response = await fetch(
+          "http://https://hiforms-backend.onrender.com//api/auth/signup",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name: formData.name,
+              email: formData.email,
+              password: formData.password,
+            }),
           },
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            password: formData.password,
-          }),
-        });
+        );
 
         const data = await response.json();
 
@@ -85,18 +88,21 @@ function UserAuth() {
       }
     } else {
       try {
-        const response = await fetch("http://localhost:5000/api/auth/login", {
-          method: "POST",
+        const response = await fetch(
+          "http://https://hiforms-backend.onrender.com//api/auth/login",
+          {
+            method: "POST",
 
-          headers: {
-            "Content-Type": "application/json",
+            headers: {
+              "Content-Type": "application/json",
+            },
+
+            body: JSON.stringify({
+              email: formData.email,
+              password: formData.password,
+            }),
           },
-
-          body: JSON.stringify({
-            email: formData.email,
-            password: formData.password,
-          }),
-        });
+        );
 
         const data = await response.json();
 

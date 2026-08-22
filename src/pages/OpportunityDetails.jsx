@@ -35,16 +35,19 @@ function OpportunityDetails() {
         return;
       }
 
-      const response = await fetch("http://localhost:5000/api/applications", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "http://https://hiforms-backend.onrender.com//api/applications",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            userId: user.userId,
+            opportunityId: opportunity._id,
+          }),
         },
-        body: JSON.stringify({
-          userId: user.userId,
-          opportunityId: opportunity._id,
-        }),
-      });
+      );
 
       const data = await response.json();
 
@@ -68,7 +71,7 @@ function OpportunityDetails() {
     const fetchOpportunity = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/opportunities/${id}`,
+          `http://https://hiforms-backend.onrender.com//api/opportunities/${id}`,
         );
 
         const data = await response.json();
